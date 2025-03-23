@@ -72,8 +72,6 @@ The discussion posts are done in Discord threads. Click the 'Threads' icon on th
 
 ---
 
-Definitions/Terminology
-
 CIA Triad
 
 Regulatory Compliance
