@@ -26,7 +26,11 @@ Utilizing mdBook this course then deploys the exported web structure to a
 
 Below is the current workflow that deploys the Git Page for the course:
 
-<img src="./assets/images/flow.png"></img>
+<div style="text-align: center;">
+
+<img src="./assets/images/workflow.png"></img>
+
+</div>
 
 To achieve this workflow locally the following environment and dependencies are
 required:
@@ -39,7 +43,7 @@ required:
     <dd>- gcc</dd>
     <dd>- rust</dd>
     <dd>- cargo</dd>
-    <dt>3. And a clone of the ProLUG PSC repository</dt>
+    <dt>3. And a clone of a ProLUG repository</dt>
 </dl>
 
 ## Building, Deploying, and Developing Locally
@@ -92,12 +96,14 @@ APT frontends:
 
 ```bash
 #!/bin/bash
-apt update
-apt install apache2 git gcc rustc-1.80 cargo-1.80
+apt-get update
+apt-get -y install apache2 git gcc rustc-1.80 cargo-1.80
 cargo-1.80 install --locked mdbook
 systemctl enable apache2 && systemctl start apache2
 cd && git clone https://github.com/ProfessionalLinuxUsersGroup/psc
-cd ~/psc && ~/.cargo/bin/mdbook build -d /var/www/html
+echo 'PATH=$PATH:~/.cargo/bin/' | tee -a ~/.profile
+export PATH=$PATH:~/.cargo/bin/ && echo $PATH
+cd ~/psc && mdbook build -d /var/www/html
 systemctl restart apache2
 ```
 
@@ -107,10 +113,12 @@ DNF frontends:
 #!/bin/bash
 dnf update
 dnf install -y httpd git gcc rust cargo
-/usr/bin/cargo install --locked mdbook
+cargo install --locked mdbook
 systemctl enable httpd && systemctl start httpd
 cd && git clone https://github.com/ProfessionalLinuxUsersGroup/psc
-cd ~/psc && ~/.cargo/bin/mdbook build -d /var/www/html
+echo 'PATH=$PATH:~/.cargo/bin/' | tee -a ~/.bash_profile
+export PATH=$PATH:~/.cargo/bin/ && echo $PATH
+cd ~/psc && mdbook build -d /var/www/html
 systemctl restart httpd
 ```
 
@@ -118,7 +126,7 @@ systemctl restart httpd
 
 ```bash
 cd {working psc directory} #for example: /root/psc or ~/psc
-~/.cargo/bin/mdbook build -d /var/www/html
+mdbook build -d /var/www/html
 systemctl restart {httpd or apache}
 ```
 
@@ -142,4 +150,4 @@ scp src/development.md 172.16.15.8:/root/psc/src/
 ssh 172.16.15.8 "cd ~/psc && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
-<img src="./assets/images/workflow.png"></img>
+<img src="./assets/images/flow.png"></img>
