@@ -64,7 +64,7 @@ pull-links() {
             # - Add associative array containing links already added
             #   - Bash can't parse markdown links as associative array keys
             #   - use md5sum hashes
-            LINK_HASH=$(printf "%s" "${MARKDOWN_LINK,,}" | md5sum | cut -d ' ' -f1)
+            LINK_HASH=$(printf "%s" "${MARKDOWN_LINK,,}" | sed -E 's/\/([>\)])?$/\1/' | md5sum | cut -d ' ' -f1)
             if [[ -z "${ADDED_LINKS["$LINK_HASH"]}" ]]; then
                 [[ -n $UNIT && -n "$MARKDOWN_LINK" ]] && sed -i "/^## Unit $UNIT$/a- $MARKDOWN_LINK" "$RESOURCES_FILE"
                 [[ -z $UNIT && -n "$MARKDOWN_LINK" ]] && sed -i "/^## Misc$/a- $MARKDOWN_LINK" "$RESOURCES_FILE"
