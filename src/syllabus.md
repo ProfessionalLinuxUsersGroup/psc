@@ -79,7 +79,7 @@ complete provided labs. Additionally, students are to propose and complete a fin
 project involving skills learned from the course.
 
 <div class="warning">
-Note: If any lab download does not work, check the <code>/labs</code> folder on the server for a <code>[course]\_[unit#]</code> .zip file to complete the activities.
+Note: If any lab download does not work, check the <code>/labs</code> folder on the server for a <code>[course]_[unit#].zip</code> file to complete the activities.
 </div>
 
 #### Recommended Tools, Resources, and Frameworks
