@@ -168,7 +168,7 @@ focused Linux engineer, the trade-off between security and productivity.
 #### Download and extract a STIG remediation tool
 
 <div class="warning">
-Note: If any lab download does not work, check the <code>/labs</code> folder on the server for a \<course\>\_\<unit#\>.zip to complete the activities.
+Note: If any lab download does not work, check the <code>/labs</code> folder on the server for a <code>[course]\_[unit#]</code> .zip file to complete the activities.
 </div>
 
 ```bash
