@@ -5,6 +5,9 @@
     </p>
 </div>
 
+> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
+> the machine from the command line so that other students will have the intended environment.
+
 ### Required Materials
 
 Putty or other connection tool Lab Server  
@@ -220,3 +223,5 @@ oscap xccdf generate fix --profile ospp --fix-type bash /usr/share/xml/scap/ssg/
 # Examine the file
 vim draf-disa-remediate.sh
 ```
+
+> Be sure to `reboot` the lab machine from the command line when you are done.

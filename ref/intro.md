@@ -12,21 +12,29 @@ there is a degree of freedom.)
 
 ## Overview
 
+---
+
 (Small paragraph overviewing the unit)
 
 ### What is the skill/tech/concept we are dealing with?
 
-1.
-2.
-3.
+(Skills, tech, or concepts related to the unit)
 
 etc..
 
 ## Learning Objectives
 
+---
+
 (Objectives and learning goals related to the unit)
 
+1.
+2.
+3.
+
 ## Relevance & Context
+
+---
 
 (Contextualize the unit content to systems administration)
 
@@ -40,6 +48,8 @@ etc..
 
 ## Prerequisites
 
+---
+
 (Any unit prerequisite knowledge)
 
 ### Briefly mention concepts or skills the reader should already understand before starting the chapter.
@@ -52,10 +62,12 @@ etc..
 
 ## Key terms and Definitions
 
+---
+
 (Any important terms relating to the unit)
 
-Term 1:
+Term 1
 
-Term 2:
+Term 2
 
 etc..

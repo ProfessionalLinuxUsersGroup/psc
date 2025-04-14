@@ -5,6 +5,9 @@
     </p>
 </div>
 
+> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
+> the machine from the command line so that other students will have the intended environment.
+
 ### Required Materials
 
 Putty or other connection tool Lab Server
@@ -130,3 +133,5 @@ ss -ntulp | grep 3306
   - What is the fix?
   - What type of control is being implemented?
   - Is it set properly on your system?
+
+> Be sure to `reboot` the lab machine from the command line when you are done.
