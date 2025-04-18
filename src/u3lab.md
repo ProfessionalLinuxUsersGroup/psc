@@ -117,7 +117,7 @@ To simplify some of the typing in this lab, there is a file located at
 
 ```bash
 [root@hammer1 ~]# cp /lab_work/identity_and_access_management.tar.gz .
-[root@hammer1 ~]# tar -xzvf identity_and_access_management.tar 
+[root@hammer1 ~]# tar -xzvf identity_and_access_management.tar.gz
 ```
 
 ### Install and configure OpenLDAP
@@ -162,7 +162,7 @@ Entry for hammer1 for example:
 [root@hammer1 ~]# firewall-cmd --list-all
 ```
 
-#### 6. Generate a password (Our example uses `testpassword`) This will return a salted SSHA password. *Save this password and stalted hash for later input*
+#### 6. Generate a password (Our example uses `testpassword`) This will return a salted SSHA password. *Save this password and salted hash for later input*
 
 ```bash
 [root@hammer1 ~]# slappasswd
@@ -529,12 +529,3 @@ Output:
 uid=15000(testuser) gid=15000 groups=15000
 
 </blockquote>
-
-
-Congratulations! Look at you, doing all the Linux.
-
-#### Please reboot the the lab machine when done.
-
-```bash
-[root@hammer1 ~]# reboot
-```
