@@ -54,7 +54,7 @@ These labs focus on configuration drift tracking and remediation.
    apt -y install aide
    ```
 
-   - What is being put in the path /etc/aide/aide.conf.d/ ?
+   - What is being put in the path `/etc/aide/aide.conf.d/`?
      - How many files are in there?
 
 3. Check your version of aide
@@ -64,6 +64,10 @@ These labs focus on configuration drift tracking and remediation.
    ```
 
 4. Read the man page (first page).
+
+   ```bash
+   man aide
+   ```
 
    - What does aide try to do, and how does it do it?
 
@@ -115,16 +119,17 @@ These labs focus on configuration drift tracking and remediation.
 2. When you finish ensure that you see broken output for 8081, as required.
 
    ```bash
-   curl node01:8080
+   curl node01:8081
    ```
 
-3. One of the dev teams figured out they could modify the test and qa environments because a
-   previous engineer left them in the sudoers file. You can address that separately with the security
-   team, but for now you need to get those environments back to working. Run your original
-   deployment command to see if it sets the environment back properly.
+3. One of the dev teams figured out they could modify the `test` and `qa`
+   environments because a previous engineer left them in the sudoers file. You can
+   address that separately with the security team, but for now you need to get those
+   environments back to working. Run your original deployment command to see if it sets
+   mhe environment back properly.
 
    ```bash
-   ansible-playbook -i /root/hosts/root/web_environment.yaml
+   ansible-playbook -i /root/hosts /root/web_environment.yaml
    ```
 
 ![Image 4](./assets/images/u8/image4.png)
