@@ -17,7 +17,7 @@ technologies as Ansible, containers, bash scripts, and more.
 
 ---
 
-The ProLUG Security Course (PSC) utilizes [mdBook](https://github.com/rust-lang/mdBook)
+The ProLUG Security Course (psc) utilizes [mdBook](https://github.com/rust-lang/mdBook)
 (markdown Book), a friendly and popular markdown utility that quickly exports
 files and web structures for documentation or general website use cases.
 
@@ -32,7 +32,7 @@ Below is the current workflow that deploys the Git Page for the course:
 
 </div>
 
-To achieve this workflow locally the following environment and dependencies are
+To achieve this deployment locally the following environment and dependencies are
 required:
 
 <dl>
@@ -60,12 +60,11 @@ environments if things go awry.
 <https://github.com/ProfessionalLinuxUsersGroup/psc/blob/main/src/assets/deploy/ansible-playbook.yml>
 
 To use this playbook, your machine(s)/containers must be configured correctly for Ansible.
-If you don't know the requirements to administer a machine via Ansible, documentation
+If you don't know the requirements to administer a machine via Ansible documentation
 has been provided below.
 
 <div class = warning>
-This playbook will need to be modified based on which distribution or package management
-tool is configured.
+This playbook attempts to install and initialize dependencies based on APT and DNF package managers only.
 </div>
 
 Getting started with Ansible:  
@@ -95,14 +94,14 @@ Tested with Rocky 9 and Ubuntu 24.04 Containers.
 APT frontends:
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 apt-get update
 apt-get -y install apache2 git gcc rustc-1.80 cargo-1.80
-cargo-1.80 install --locked mdbook
-systemctl enable apache2 && systemctl start apache2
+cargo-1.80 install --locked mdbook@0.4.48
+systemctl enable --now apache2
 cd && git clone https://github.com/ProfessionalLinuxUsersGroup/psc
 echo 'PATH=$PATH:~/.cargo/bin/' | tee -a ~/.profile
-export PATH=$PATH:~/.cargo/bin/ && echo $PATH
+export PATH=$PATH:~/.cargo/bin/ && echo $PATH | grep cargo
 cd ~/psc && mdbook build -d /var/www/html
 systemctl restart apache2
 ```
@@ -110,14 +109,14 @@ systemctl restart apache2
 DNF frontends:
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 dnf update
 dnf install -y httpd git gcc rust cargo
 cargo install --locked mdbook
-systemctl enable httpd && systemctl start httpd
+systemctl enable --now httpd
 cd && git clone https://github.com/ProfessionalLinuxUsersGroup/psc
 echo 'PATH=$PATH:~/.cargo/bin/' | tee -a ~/.bash_profile
-export PATH=$PATH:~/.cargo/bin/ && echo $PATH
+export PATH=$PATH:~/.cargo/bin/ && echo $PATH | grep cargo
 cd ~/psc && mdbook build -d /var/www/html
 systemctl restart httpd
 ```
@@ -138,8 +137,8 @@ From there you should be able to see any changes you have made are reflected.
 
 #### Or send commands over to a networked container or machine:
 
-**Note:** To minimize complexity and given the nature of commands over SSH, these
-commands will need to utilize absolute paths.
+**Note:** To minimize complexity and given the nature of commands over SSH,
+these commands will need to utilize absolute paths.
 
 ```bash
 scp {working directory}/{targeted document} {TARGET_IP}:/root/psc/src/{targeted document}
