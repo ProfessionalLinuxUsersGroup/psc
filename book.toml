@@ -10,5 +10,5 @@ site-url = "/psc/"
 default-theme = "navy"
 no-section-label = true
 git-repository-url = "https://github.com/ProfessionalLinuxUsersGroup/psc"
-edit-url-template = "https://github.com/ProfessionalLinuxUsersGroup/psc/issues"
+edit-url-template = "https://github.com/ProfessionalLinuxUsersGroup/psc/issues/new"
 git-repository-icon = "fa-github"
