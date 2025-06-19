@@ -11,11 +11,11 @@ In today’s interconnected world, the integrity and security of transmitted dat
 
 ## Learning Objectives
 
-1. Defining
-2. Explore change management frameworks, including CMDBs and baselines.
-3. Implement detection tools like AIDE to monitor file system integrity.
-4. Use Ansible to remediate drift and enforce configuration state.
-5. Connect drift management to compliance, auditability, and incident response.
+1. Define the purpose and function of digital certificates and cryptographic keys.
+2. Understand the differences between symmetric and asymmetric encryption.
+3. Learn how TLS uses certificates for secure communication.
+4. Explore the process of certificate signing and validation (PKI).
+5. Use tools like `openssl` to generate keys and inspect certificates.
 
 ## Prerequisites
 
