@@ -28,17 +28,15 @@ could be transposed to a `.md` file.
 
 ### Unit 10 Recording
 
-Coming soon.
-
-<!-- <iframe -->
-<!--     style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black;" -->
-<!--     src="" -->
-<!--     title="Unit 10 Recording - ProLUG Linux Security Engineering Course - Free in Discord; -->
-<!--     frameborder="0; -->
-<!--     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; -->
-<!--     referrerpolicy="strict-origin-when-cross-origin; -->
-<!--     allowfullscreen;> -->
-<!-- </iframe> -->
+<iframe
+    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black;"
+    src="https://www.youtube.com/embed/LqvoE0UXiOo?si=g2otC2JAo7O2qscC"
+    title="Unit 10 Recording - ProLUG Linux Security Engineering Course - Free in Discord;
+    frameborder="0;
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;
+    referrerpolicy="strict-origin-when-cross-origin;
+    allowfullscreen;>
+</iframe>
 
 #### Discussion Post #1
 
@@ -76,7 +74,7 @@ The discussion posts are done in Discord Forums.
 
 ---
 
-- Capture from this week lesson or recording
+- Capture terms and definitions from this week's lesson or recording
 
 ## Digging Deeper
 
@@ -84,4 +82,3 @@ The discussion posts are done in Discord Forums.
 
 1. Review more of the SRE books from Google: <https://sre.google/books/> to try to find
    more useful change management practices and policies.
-
