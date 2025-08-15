@@ -21,13 +21,13 @@ guidelines set forth in this document.
 
 There are four main components to earning the certification.
 
-1. Worksheet Completion
+1. [Worksheet Completion](#worksheet-completion)
 
-2. Discussion Questions
+2. [Discussion Questions](#discussion-questions)
 
-3. Lab Completion
+3. [Lab Completion](#lab-completion)
 
-4. Final Project
+4. [Final Project](#final-project)
 
 ## Worksheet Completion
 
@@ -55,12 +55,12 @@ them as files on their machines and submit via email.
 
 Each unit's worksheet contains multiple discussion questions.  
 Each discussion question has its own thread in the ProLUG Discord server, in the
-`#prolug-projects` channel.
+`#course-discussion-posts` forum channel.
 
-To qualify for certification:
+To qualify for certification, you must:
 
-- You must post your answer to each discussion question in the correct thread.
-- You must respond to another student's answer in the same thread.
+- Post your answer to each discussion question in the correct thread.
+- Respond to another student's answer in the same thread.
 
 The goal of this is not to create busywork, but to spark discussions and see things
 from other points of view.
@@ -74,7 +74,7 @@ Each unit has a lab that is to be completed.
 The labs, like the worksheets, should be also completed and saved until the end of
 the course.
 
-These labs should be turned in along with the worksheets in the same format of your choice.
+These labs should be submitted to the instructor along with the worksheets in the same format of your choice.
 
 ## Final Project
 
