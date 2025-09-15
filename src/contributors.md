@@ -11,7 +11,7 @@ The group met weekly to organize efforts, manage contributions, and onboard new 
 
 ## Lead Authors
 - **[Scott Champine](https://www.linkedin.com/in/scottchampine/)**  
-  [GitHub](https://github.com/scottchampine) – Lead Author, network & security engineer, CISSP, Linux instructor.
+  [GitHub](https://github.com/scottchampine) – Prolug founder, Lead Author, network & security engineer, CISSP, Linux instructor.
 
 ## Organizing Contributors:
 
